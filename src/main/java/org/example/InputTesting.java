@@ -2,8 +2,13 @@ package org.example;
 
 public class InputTesting {
 
-    public boolean validateTheInput(String input) {
+     private String input;
 
+    public InputTesting(String input) {
+        this.input = input;
+    }
+
+    public boolean validateTheInput() {
         if (input == null || input.isEmpty()) {
             return false;
         }
