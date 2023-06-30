@@ -2,8 +2,8 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        String a = "6 2 8 33 88 7777 9999 0 55 666 7777 7777 666 9 7777 55 444";
-        String b = "kocham cie";
+        String a = "55 666 222 44 2 6 0 222 444 33 ";
+        String b = "Kocham cie";
         InputTesting test = new InputTesting(a);
         Decoding decoding = new Decoding();
         System.out.println(decoding.decodingFunctionNumbers(a));
