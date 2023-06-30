@@ -3,6 +3,9 @@ package org.example;
 import java.util.Arrays;
 
 public class DataMapping {
+
+
+
     public String getValue(Dictionary key) {
         return key.getValue();
     }

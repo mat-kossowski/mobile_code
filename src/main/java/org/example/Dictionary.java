@@ -1,10 +1,11 @@
 package org.example;
 
 public enum Dictionary {
+    KEY_0("0", " "),
 
-    KEY_1("2", "a"),
-    KEY_11("22", "b"),
-    KEY_111("222", "c"),
+    KEY_2("2", "a"),
+    KEY_22("22", "b"),
+    KEY_222("222", "c"),
     KEY_3("3", "d"),
     KEY_33("33", "e"),
     KEY_333("333", "f"),
@@ -44,5 +45,24 @@ public enum Dictionary {
     public String getValue() {
         return value;
     }
-}
 
+    public static String getValueForKey(String key) {
+        Dictionary[] values = Dictionary.values();
+        for (Dictionary dictionary : values) {
+            if (dictionary.getKey().equals(key)) {
+                return dictionary.getValue();
+            }
+        }
+        return null; // Zwracanie null, gdy nie znaleziono pasującego klucza
+    }
+
+    public static String getKeyForValue(String value) {
+        Dictionary[] values = Dictionary.values();
+        for (Dictionary dictionary : values) {
+            if (dictionary.getValue().equals(value)) {
+                return dictionary.getKey();
+            }
+        }
+        return null;
+    }
+}

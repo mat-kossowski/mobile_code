@@ -14,7 +14,7 @@ public class InputTesting {
         }
 
         for (char c : input.toCharArray()) {
-            if (!Character.isDigit(c) && c != ' ') {
+            if (c == '1' || !Character.isDigit(c) && c != ' ') {
                 return false;
             }
         }
