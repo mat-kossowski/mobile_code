@@ -1,4 +1,4 @@
-package org.example;
+package org.example.decoding;
 
 public enum Dictionary {
     KEY_0("0", " "),
@@ -53,7 +53,7 @@ public enum Dictionary {
                 return dictionary.getValue();
             }
         }
-        return null; // Zwracanie null, gdy nie znaleziono pasującego klucza
+        return "#"; // Zwracanie null, gdy nie znaleziono pasującego klucza
     }
 
     public static String getKeyForValue(String value) {
@@ -63,6 +63,6 @@ public enum Dictionary {
                 return dictionary.getKey();
             }
         }
-        return null;
+        return "#";
     }
 }
