@@ -24,23 +24,22 @@ public class Controller {
 
     }
 
-        public static boolean containsOnlyDigits(String input) {
-    for (int i = 0; i < input.length(); i++) {
-        if (!Character.isDigit(input.charAt(i)) && input.charAt(i) != ' ') {
-            return false;
+    public static boolean containsOnlyDigits(String input) {
+        for (int i = 0; i < input.length(); i++) {
+            if (!Character.isDigit(input.charAt(i)) && input.charAt(i) != ' ') {
+                return false;
+            }
         }
+        return true;
     }
-    return true;
-}
 
     public String decoding() {
         if (testInput()) {
 
-            if (containsOnlyDigits(code) ) {
+            if (containsOnlyDigits(code)) {
                 DecodingNumbers decodingNumbers = new DecodingNumbers();
                 return decodingNumbers.decodingFunctionNumbers(code);
-            }
-            else  {
+            } else {
                 DecodingWords decodingWords = new DecodingWords();
                 return decodingWords.decodingFunctionWords(code);
             }
